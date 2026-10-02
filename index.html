@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Student Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🎓 Smart Student Attendance System</h1>
+            <p>Manage student records and track attendance easily</p>
+        </header>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Present Today</h3>
+                <p id="presentToday">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Absent Today</h3>
+                <p id="absentToday">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Attendance</h3>
+                <p id="averageAttendance">0%</p>
+            </div>
+        </section>
+
+        <!-- Add Student -->
+        <section class="form-section">
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+                <input type="text" id="studentName"
+                       placeholder="Student Name" required>
+
+                <input type="text" id="rollNumber"
+                       placeholder="Roll Number" required>
+
+                <input type="text" id="course"
+                       placeholder="Course / Branch" required>
+
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <!-- Attendance Controls -->
+        <section class="attendance-section">
+            <div class="section-header">
+                <h2>Attendance Records</h2>
+
+                <input type="text" id="searchInput"
+                       placeholder="🔍 Search student...">
+            </div>
+
+            <div class="date-control">
+                <label>Select Date:</label>
+                <input type="date" id="attendanceDate">
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll No.</th>
+                            <th>Name</th>
+                            <th>Course</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                            <th>Total Classes</th>
+                            <th>Attendance %</th>
+                            <th>Today's Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <p>Smart Student Attendance System © 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
